@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.swag_labs.Tela_inicial_ListagemDeProdutos.RedirecionamentoTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.42 s -- in com.swag_labs.Tela_inicial_ListagemDeProdutos.RedirecionamentoTest

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.swag_labs.Cenario3_CarrinhoDeCompras.CT03_ValidarRemocaoDeProduto
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.39 s -- in com.swag_labs.Cenario3_CarrinhoDeCompras.CT03_ValidarRemocaoDeProduto

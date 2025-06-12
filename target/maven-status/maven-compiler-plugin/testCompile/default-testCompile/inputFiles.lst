@@ -1,0 +1,16 @@
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario1_Autenticacao\CT01_ValidarLoginComSucesso.java
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario1_Autenticacao\CT02_ValidarLoginComSenhaIncorreta.java
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario1_Autenticacao\CT03_ValidarLoginComUsuarioBloqueado.java
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario1_Autenticacao\CT08_ValidarLogout.java
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario2_TelaInicialEListagemDeProdutos\CT01_ValidarListagemComSucesso.java
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario2_TelaInicialEListagemDeProdutos\CT02_ValidarRedirecionamentoPorNome.java
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario2_TelaInicialEListagemDeProdutos\CT04_ValidarRedirecionamentoVoltarAosProdutos.java
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario2_TelaInicialEListagemDeProdutos\CT05_ValidarRedirecionamentoParaTodosItens.java
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario3_CarrinhoDeCompras\CT01_ValidarAdicionarProdutoComSucesso.java
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario3_CarrinhoDeCompras\CT03_ValidarRemocaoDeProduto.java
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario3_CarrinhoDeCompras\CT04_PersistenciaDeProduto.java
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario3_CarrinhoDeCompras\CT06_ValidarAdicionarMultiplasUnidades.java
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario4_Checkout\CT01_ValidarCheckoutComSucesso.java
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario4_Checkout\CT02_ValidarCancelamentoCheckout.java
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario4_Checkout\CT04_ValidarCheckoutSemProduto.java
+C:\Users\emilayd.costa\Documents\AUTOMACAO\automacao_saucedemo\src\test\java\com\swag_labs\Cenario4_Checkout\CT060708_ValidarCamposObrigatoriosCheckout.java

@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: com.swag_labs.Cenario3_CarrinhoDeCompras.ValidacaoCarrinhoCompletoTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.793 s <<< FAILURE! -- in com.swag_labs.Cenario3_CarrinhoDeCompras.ValidacaoCarrinhoCompletoTest
+com.swag_labs.Cenario3_CarrinhoDeCompras.ValidacaoCarrinhoCompletoTest.verificarProdutosVisiveis -- Time elapsed: 0.023 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method obterNomesProdutos() is undefined for the type ProdutosPage
+	The method isNomeProdutoVisivel(int) is undefined for the type ProdutosPage
+	The method isPrecoProdutoVisivel(int) is undefined for the type ProdutosPage
+	The method isImagemProdutoVisivel(int) is undefined for the type ProdutosPage
+	The method isBotaoAdicionarVisivel(int) is undefined for the type ProdutosPage
+
+	at com.swag_labs.Cenario3_CarrinhoDeCompras.ValidacaoCarrinhoCompletoTest.verificarProdutosVisiveis(ValidacaoCarrinhoCompletoTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
