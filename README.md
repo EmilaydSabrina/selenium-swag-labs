@@ -10,7 +10,7 @@ Swag Labs é um site de demonstração desenvolvido pela Sauce Labs para fins de
 - Logout
 
 Foram criados dois documentos para organização e planejamento do projeto:
-[Swag Labs -Roteiro](https://docs.google.com/spreadsheets/d/16XS63v6QGScx431QsICrOG694evS26oM/editusp=sharing&ouid=114784664121049974449&rtpof=true&sd=true) e 
+[Swag Labs -Roteiro](https://docs.google.com/spreadsheets/d/16XS63v6QGScx431QsICrOG694evS26oM/edit?usp=sharing&ouid=114784664121049974449&rtpof=true&sd=true) e 
 [Identificação e Planejamento de Testes](https://docs.google.com/document/d/1p8H10PrEHsa9A97XkJTRZkm-eeK0ndq3qlfpuUfEGBY/edit?usp=sharing)
 
 ## Como o Roteiro está organizado:
