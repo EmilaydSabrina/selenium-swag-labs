@@ -40,23 +40,43 @@ Antes de iniciar, certifique-se de que você tem as ferramentas abaixo instalada
 - Navegador Google Chrome instalado (utilizado nos testes com ChromeDriver)
 
 Passo a Passo:
-1. Clone o repositório do projeto.
+# Automação Saucedemo
+
+## Passo a Passo para rodar o projeto
+
+1. Clone o repositório do projeto
+
+```bash
+git clone <url-do-repositorio>
+cd selenium-swag-labs
+```
 2. Importe o projeto para sua IDE favorita e instale as extensões:
 - Java Extension Pack
 - Maven for Java
 3. Instale as dependências do projeto com Maven:
+```bash
   mvn clean install
+```
+`Obs: Esse comando também executa os testes automaticamente.
+Se quiser instalar sem rodar os testes, utilize:`
+```bash
+  mvn clean install -DskipTests
+```
 4. Execute os testes automatizados:
+```bash
   mvn test
-5. Você também pode executar uma classe de teste específica com o comando:
+```
+6. Você também pode executar uma classe de teste específica com o comando:
+```bash
   mvn -Dtest=NomeDaClasseDeTeste
+```
 
-Observações:
+## Observações:
 Os testes são executados utilizando o ChromeDriver. Certifique-se de que:
 O chromedriver esteja compatível com a versão do seu navegador Chrome.
 O chromedriver esteja localizado no PATH do sistema ou configurado diretamente no código.
 
-Independência dos Testes:
+## Independência dos Testes:
 Todos os testes automatizados neste projeto foram desenvolvidos de forma independente e isolada. Isso significa que:
 - Cada teste executa seu próprio cenário completo, desde o login até a verificação dos resultados.
 - Não há dependência entre testes, ou seja, a execução de um não afeta o outro.
