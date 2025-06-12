@@ -4,26 +4,19 @@ import com.swag_labs.pages.LoginPage;
 import com.swag_labs.pages.ProdutosPage;
 import com.swag_labs.utils.GerenciamentoDriver;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
+import org.openqa.selenium.WebDriver;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class CT05_ValidarRedirecionamentoParaTodosItens {
+public class CT04_ValidarRedirecionamentoVoltarAosProdutosTest {
 
     private static WebDriver driver;
     private static LoginPage loginPage;
     private static ProdutosPage produtosPage;
-    private static WebDriverWait wait;
 
     @BeforeAll
     public static void setUp() {
         driver = GerenciamentoDriver.getDriver("chrome");
         driver.manage().window().maximize();
-
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         loginPage = new LoginPage(driver);
         produtosPage = new ProdutosPage(driver);
@@ -38,13 +31,14 @@ public class CT05_ValidarRedirecionamentoParaTodosItens {
     }
 
     @Test
-    @DisplayName("Validar os 6 produtos, clicar no nome, abrir menu e selecionar 'All Items'")
-    public void validarProdutosENavegacaoPorMenu() {
+    @DisplayName("Validar listagem, redirecionamento e retorno à página de produtos")
+    public void validarRedirecionamentoEVoltar() {
 
         Assertions.assertTrue(produtosPage.todosProdutosValidos(),
             "Algum produto está com dados ausentes ou não está sendo exibido corretamente.");
 
         String nomeEsperado = produtosPage.obterNomePrimeiroProduto();
+
         produtosPage.clicarNomePrimeiroProduto();
 
         Assertions.assertTrue(produtosPage.isPaginaDeDetalhesVisivel(),
@@ -54,30 +48,11 @@ public class CT05_ValidarRedirecionamentoParaTodosItens {
         Assertions.assertEquals(nomeEsperado, nomeNaPaginaDetalhes,
             "O nome do produto na página de detalhes não corresponde ao nome listado.");
 
-    
-        fecharMenuLateralSeAberto();
 
+        produtosPage.clicarBotaoVoltarAosProdutos();
 
-        WebElement btnMenu = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-burger-menu-btn")));
-        btnMenu.click();
-
-        produtosPage.clicarOpcaoTodosOsItens();
-
-        Assertions.assertTrue(produtosPage.todosProdutosValidos(),
-            "Não foi redirecionado corretamente para a página com os produtos após selecionar 'All Items'.");
-    }
-
-    private void fecharMenuLateralSeAberto() {
-        try {
-            WebElement menu = driver.findElement(By.className("bm-menu"));
-            if (menu.isDisplayed()) {
-                WebElement btnClose = driver.findElement(By.id("react-burger-cross-btn"));
-                wait.until(ExpectedConditions.elementToBeClickable(btnClose)).click();
-                wait.until(ExpectedConditions.invisibilityOf(menu));
-            }
-        } catch (NoSuchElementException | TimeoutException e) {
-            
-        }
+        Assertions.assertTrue(produtosPage.isPaginaProdutosVisivel(),
+            "Não retornou corretamente à página de listagem de produtos.");
     }
 
     @AfterAll
@@ -87,3 +62,4 @@ public class CT05_ValidarRedirecionamentoParaTodosItens {
         }
     }
 }
+

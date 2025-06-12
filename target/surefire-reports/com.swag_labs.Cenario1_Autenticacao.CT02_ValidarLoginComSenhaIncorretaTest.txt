@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.swag_labs.Cenario1_Autenticacao.CT02_ValidarLoginComSenhaIncorretaTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.832 s -- in com.swag_labs.Cenario1_Autenticacao.CT02_ValidarLoginComSenhaIncorretaTest

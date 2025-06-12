@@ -9,12 +9,16 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class CT01_ValidarAdicionarProdutoComSucesso {
+public class CT04_PersistenciaDeProdutoTest {
 
     private static WebDriver driver;
     private static LoginPage loginPage;
     private static ProdutosPage produtosPage;
     private static CarrinhoPage carrinhoPage;
+
+    private static String nomeProdutoSelecionado;
+    private static String descricaoProdutoSelecionado;
+    private static String precoProdutoSelecionado;
 
     @BeforeAll
     public static void setUp() {
@@ -36,32 +40,44 @@ public class CT01_ValidarAdicionarProdutoComSucesso {
 
     @Test
     @Order(1)
-    @DisplayName("Adicionar produto ao carrinho, validar botão, ícone e listagem no carrinho")
-    public void adicionarEValidarProdutoNoCarrinhoCompleto() {
-        String nomeProdutoSelecionado = produtosPage.obterNomePrimeiroProduto();
-        String descricaoProdutoSelecionado = produtosPage.obterDescricaoPrimeiroProduto();
-        String precoProdutoSelecionado = produtosPage.obterPrecoPrimeiroProduto();
+    @DisplayName("Adicionar produto ao carrinho e validar persistência ao navegar entre páginas")
+    public void adicionarProdutoEValidarPersistenciaNoCarrinho() {
+        nomeProdutoSelecionado = produtosPage.obterNomePrimeiroProduto();
+        descricaoProdutoSelecionado = produtosPage.obterDescricaoPrimeiroProduto();
+        precoProdutoSelecionado = produtosPage.obterPrecoPrimeiroProduto();
 
         produtosPage.adicionarPrimeiroProdutoAoCarrinho();
 
         Assertions.assertTrue(produtosPage.isBotaoRemoverVisivelPrimeiroProduto(),
-            "O botão 'Remover' não foi exibido após adicionar o produto.");
+            "Botão 'Remover' não apareceu após adicionar produto.");
 
         Assertions.assertEquals("1", produtosPage.obterQuantidadeItensNoCarrinho(),
-            "O ícone do carrinho não foi atualizado para '1' após adicionar o produto.");
+            "Ícone do carrinho não mostra quantidade '1'.");
+
+        produtosPage.clicarNomePrimeiroProduto();
+
+        Assertions.assertTrue(produtosPage.isPaginaDeDetalhesVisivel(),
+            "Página de detalhes do produto não está visível.");
+
+        produtosPage.clicarBotaoVoltarAosProdutos();
+
+        Assertions.assertTrue(produtosPage.isPaginaProdutosVisivel(),
+            "Página de produtos não está visível após voltar.");
+
+        Assertions.assertTrue(produtosPage.isBotaoRemoverVisivelPrimeiroProduto(),
+            "Produto não persistiu no carrinho após navegação entre páginas.");
+
+        Assertions.assertEquals("1", produtosPage.obterQuantidadeItensNoCarrinho(),
+            "Ícone do carrinho não persiste com quantidade '1' após navegação.");
 
         carrinhoPage.clicarNoIconeCarrinho();
 
         Assertions.assertTrue(carrinhoPage.isPaginaCarrinhoVisivel(),
-            "Não foi possível acessar a página do carrinho.");
-
-        Assertions.assertEquals(1, carrinhoPage.obterQuantidadeItensNoCarrinho(),
-            "Quantidade de itens no carrinho está incorreta.");
+            "Página do carrinho não está visível.");
 
         Assertions.assertTrue(
             carrinhoPage.isProdutoVisivelNoCarrinho(nomeProdutoSelecionado, descricaoProdutoSelecionado, precoProdutoSelecionado),
-            "Produto listado no carrinho não corresponde ao selecionado."
-        );
+            "Produto não está listado no carrinho após navegação.");
     }
 
     @AfterAll
@@ -69,3 +85,4 @@ public class CT01_ValidarAdicionarProdutoComSucesso {
         GerenciamentoDriver.quitDriver();
     }
 }
+

@@ -8,7 +8,7 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class CT03_ValidarRemocaoDeProduto {
+public class CT03_ValidarRemocaoDeProdutoTest {
 
     private static WebDriver driver;
     private static LoginPage loginPage;

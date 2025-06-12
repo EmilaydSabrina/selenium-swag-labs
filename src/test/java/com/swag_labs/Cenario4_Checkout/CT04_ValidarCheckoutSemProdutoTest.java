@@ -7,7 +7,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CT04_ValidarCheckoutSemProduto {
+public class CT04_ValidarCheckoutSemProdutoTest {
 
     private WebDriver driver;
     private ProdutosPage produtosPage;

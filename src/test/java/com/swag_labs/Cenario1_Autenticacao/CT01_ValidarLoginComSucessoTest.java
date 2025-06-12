@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class CT01_ValidarLoginComSucesso {
+public class CT01_ValidarLoginComSucessoTest {
 
     private static LoginPage loginPage;
 

@@ -3,12 +3,11 @@ package com.swag_labs.Cenario2_TelaInicialEListagemDeProdutos;
 import com.swag_labs.pages.LoginPage;
 import com.swag_labs.pages.ProdutosPage;
 import com.swag_labs.utils.GerenciamentoDriver;
-
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class CT02_ValidarRedirecionamentoPorNome {
+public class CT01_ValidarListagemComSucessoTest {
 
     private static WebDriver driver;
     private static LoginPage loginPage;
@@ -32,22 +31,10 @@ public class CT02_ValidarRedirecionamentoPorNome {
     }
 
     @Test
-    @DisplayName("Validar listagem dos produtos e redirecionamento ao clicar no nome do primeiro")
-    public void validarListagemEValidarRedirecionamento() {
-
+    @DisplayName("Validar que os 6 produtos estão listados com nome, preço, imagem e botão de adicionar")
+    public void validarProdutosCompletos() {
         Assertions.assertTrue(produtosPage.todosProdutosValidos(),
             "Algum produto está com dados ausentes ou não está sendo exibido corretamente.");
-
-        String nomeEsperado = produtosPage.obterNomePrimeiroProduto();
-
-        produtosPage.clicarNomePrimeiroProduto();
-
-        Assertions.assertTrue(produtosPage.isPaginaDeDetalhesVisivel(),
-            "Página de detalhes do produto não está visível após o clique.");
-
-        String nomeNaPaginaDetalhes = produtosPage.obterNomeProdutoNaPaginaDetalhes();
-        Assertions.assertEquals(nomeEsperado, nomeNaPaginaDetalhes,
-            "O nome do produto na página de detalhes não corresponde ao nome listado.");
     }
 
     @AfterAll

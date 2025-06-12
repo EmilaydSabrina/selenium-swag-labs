@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CT02_ValidarCancelamentoCheckout {
+public class CT02_ValidarCancelamentoCheckoutTest {
 
     private WebDriver driver;
     private LoginPage loginPage;

@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.time.Duration;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class CT08_ValidarLogout {
+public class CT08_ValidarLogoutTest {
 
     private static WebDriver driver;
     private static LoginPage loginPage;

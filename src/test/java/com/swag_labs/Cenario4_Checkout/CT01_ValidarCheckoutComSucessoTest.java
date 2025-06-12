@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CT01_ValidarCheckoutComSucesso {
+public class CT01_ValidarCheckoutComSucessoTest {
 
     private WebDriver driver;
     private LoginPage loginPage;

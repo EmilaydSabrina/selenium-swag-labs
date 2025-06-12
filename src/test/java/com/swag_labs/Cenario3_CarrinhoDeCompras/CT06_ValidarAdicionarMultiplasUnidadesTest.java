@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class CT06_ValidarAdicionarMultiplasUnidades {
+public class CT06_ValidarAdicionarMultiplasUnidadesTest {
 
     private static WebDriver driver;
     private static LoginPage loginPage;

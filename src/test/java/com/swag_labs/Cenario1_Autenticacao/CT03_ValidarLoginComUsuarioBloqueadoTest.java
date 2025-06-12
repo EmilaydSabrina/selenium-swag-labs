@@ -6,28 +6,29 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CT02_ValidarLoginComSenhaIncorreta {
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+public class CT03_ValidarLoginComUsuarioBloqueadoTest {
 
-    private static WebDriver driver;
     private static LoginPage loginPage;
 
     @BeforeAll
     public static void setup() {
-        driver = GerenciamentoDriver.getDriver("chrome"); // Sugestão: usar variável de ambiente
+        WebDriver driver = GerenciamentoDriver.getDriver("chrome");
         driver.manage().window().maximize();
         loginPage = new LoginPage(driver);
     }
 
     @Test
-    @DisplayName("Não deve realizar login com senha incorreta")
-    public void naoDeveRealizarLoginComSenhaIncorreta() {
+    @Order(1)
+    @DisplayName("Não deve realizar login com usuário bloqueado")
+    public void naoDeveLogarComUsuarioBloqueado() {
         loginPage.acessarPagina();
-        loginPage.preencherUsuario("standard_user");
-        loginPage.preencherSenha("123456");
+        loginPage.preencherUsuario("locked_out_user");
+        loginPage.preencherSenha("secret_sauce");
         loginPage.clicarLogin();
 
-        String mensagemEsperada = "Epic sadface: Username and password do not match any user in this service";
-        assertTrue(loginPage.mensagemErroVisivel(mensagemEsperada),
+        String mensagemErroEsperada = "Epic sadface: Sorry, this user has been locked out.";
+        assertTrue(loginPage.mensagemErroVisivel(mensagemErroEsperada),
             "A mensagem de erro esperada não foi exibida ou o login foi aceito incorretamente.");
     }
 
@@ -36,3 +37,4 @@ public class CT02_ValidarLoginComSenhaIncorreta {
         GerenciamentoDriver.quitDriver();
     }
 }
+

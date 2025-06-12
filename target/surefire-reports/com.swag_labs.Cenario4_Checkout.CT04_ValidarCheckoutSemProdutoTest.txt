@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.swag_labs.Cenario4_Checkout.CT04_ValidarCheckoutSemProdutoTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.337 s <<< FAILURE! -- in com.swag_labs.Cenario4_Checkout.CT04_ValidarCheckoutSemProdutoTest
+com.swag_labs.Cenario4_Checkout.CT04_ValidarCheckoutSemProdutoTest.tentarCheckoutSemProdutosNoCarrinho_deveFalhar -- Time elapsed: 3.335 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Erro esperado: o sistema deveria exibir uma mensagem de erro ao tentar checkout com carrinho vazio. ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.swag_labs.Cenario4_Checkout.CT04_ValidarCheckoutSemProdutoTest.tentarCheckoutSemProdutosNoCarrinho_deveFalhar(CT04_ValidarCheckoutSemProdutoTest.java:58)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

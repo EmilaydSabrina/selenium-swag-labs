@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CT060708_ValidarCamposObrigatoriosCheckout {
+public class CT060708_ValidarCamposObrigatoriosCheckoutTest {
 
     private WebDriver driver;
     private LoginPage loginPage;
