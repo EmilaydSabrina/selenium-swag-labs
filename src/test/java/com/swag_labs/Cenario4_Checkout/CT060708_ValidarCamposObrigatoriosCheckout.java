@@ -33,16 +33,16 @@ public class CT060708_ValidarCamposObrigatoriosCheckout {
         loginPage.preencherSenha("secret_sauce");
         loginPage.clicarLogin();
 
-        assertTrue(wait.until(d -> produtosPage.isPaginaProdutosVisivel()), "Falha ao carregar página produtos.");
+        assertTrue(wait.until((WebDriver d) -> produtosPage.isPaginaProdutosVisivel()), "Falha ao carregar página produtos.");
 
         produtosPage.adicionarPrimeiroProdutoAoCarrinho();
         assertEquals("1", produtosPage.obterQuantidadeItensNoCarrinho(), "Carrinho deve ter 1 item.");
 
         produtosPage.clicarNoIconeCarrinho();
-        assertTrue(wait.until(d -> carrinhoPage.isPaginaCarrinhoVisivel()), "Página carrinho não visível.");
+        assertTrue(wait.until((WebDriver d) -> carrinhoPage.isPaginaCarrinhoVisivel()), "Página carrinho não visível.");
 
         carrinhoPage.clicarBotaoCheckout();
-        assertTrue(wait.until(d -> checkoutPage.isPaginaCheckoutVisivel()), "Página checkout não visível.");
+        assertTrue(wait.until((WebDriver d) -> checkoutPage.isPaginaCheckoutVisivel()), "Página checkout não visível.");
     }
 
     @Test

@@ -34,14 +34,15 @@ public class CT02_ValidarCancelamentoCheckout {
         loginPage.preencherSenha("secret_sauce");
         loginPage.clicarLogin();
 
-        assertTrue(wait.until(driver -> produtosPage.isPaginaProdutosVisivel()), "Falha ao carregar a página de produtos.");
+        boolean paginaVisivel = wait.until((WebDriver d) -> produtosPage.isPaginaProdutosVisivel());
+        assertTrue(paginaVisivel, "Falha ao carregar a página de produtos.");
 
         produtosPage.adicionarPrimeiroProdutoAoCarrinho();
         assertTrue(produtosPage.isBotaoRemoverVisivelPrimeiroProduto(), "Botão 'Remover' não visível após adicionar.");
         assertEquals("1", produtosPage.obterQuantidadeItensNoCarrinho(), "Carrinho não atualizado.");
 
         carrinhoPage.clicarNoIconeCarrinho();
-        assertTrue(wait.until(driver -> carrinhoPage.isPaginaCarrinhoVisivel()), "Falha ao carregar a página do carrinho.");
+        assertTrue(wait.until((WebDriver d) -> carrinhoPage.isPaginaCarrinhoVisivel()), "Falha ao carregar a página do carrinho.");
 
         carrinhoPage.clicarBotaoCheckout();
 

@@ -105,7 +105,7 @@ public class CarrinhoPage {
 
     public boolean isMensagemErroCheckoutVisivel() {
         try {
-            return wait.until(ExpectedConditions.visibilityOfElementLocated(mensagemErroCheckout)).isDisplayed();
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(mensagemErroCheckout)) != null;
         } catch (Exception e) {
             return false;
         }
